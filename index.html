@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Paco Lee 的个人主页：项目、研究兴趣、动态与联系方式。" />
+  <meta name="theme-color" content="#17253f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Paco Lee — Portfolio" />
+  <meta property="og:description" content="项目、研究兴趣、动态与联系方式。" />
+  <meta property="og:image" content="assets/img/social-card.svg" />
+  <title>Paco Lee — Portfolio</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/content.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">PL</span>
+        <span class="brand-name">Paco Lee</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">打开导航</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主要导航">
+        <a href="#about" data-i18n="nav.about">关于</a>
+        <a href="#focus" data-i18n="nav.focus">方向</a>
+        <a href="#projects" data-i18n="nav.projects">项目</a>
+        <a href="#updates" data-i18n="nav.updates">动态</a>
+        <a href="#contact" data-i18n="nav.contact">联系</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="language-toggle" type="button" aria-label="切换语言" title="中 / EN">中</button>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深浅色主题" title="切换主题">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-pad">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">个人主页 · 项目与研究</p>
+          <h1>
+            <span data-i18n="hero.greeting">你好，我是</span>
+            <strong>Paco Lee</strong>
+          </h1>
+          <p class="hero-lead" data-i18n="hero.lead">把研究、技术与想法整理成可被看见、使用和延续的作品。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects" data-i18n="hero.primaryCta">查看项目</a>
+            <a class="button button-ghost" href="mailto:meiqingg@gmail.com" data-i18n="hero.secondaryCta">联系我</a>
+          </div>
+          <dl class="hero-stats" aria-label="GitHub 公开数据">
+            <div><dt id="repo-count">—</dt><dd data-i18n="stats.repos">公开仓库</dd></div>
+            <div><dt id="follower-count">—</dt><dd data-i18n="stats.followers">关注者</dd></div>
+            <div><dt id="github-status">Live</dt><dd data-i18n="stats.status">持续更新</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-portrait-wrap reveal" aria-label="Paco Lee 的 GitHub 头像">
+          <div class="portrait-frame">
+            <img class="portrait" src="assets/img/avatar.png" alt="Paco Lee 的 GitHub 头像" width="512" height="512" />
+          </div>
+          <div class="availability-card">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span data-i18n="hero.availability">欢迎交流与合作</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="about">
+      <div class="shell split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 data-i18n="about.title">关于我</h2>
+        </div>
+        <div class="prose reveal">
+          <p data-i18n="about.p1">这是 Paco Lee 的个人主页，用于集中展示公开项目、研究兴趣、写作与合作方式。</p>
+          <p data-i18n="about.p2">我重视清晰的问题定义、可靠的方法和可复用的成果，也愿意把探索过程公开记录下来，让知识更容易被理解和继续发展。</p>
+          <div class="tag-row" aria-label="关键词">
+            <span data-i18n="about.tag1">开放协作</span>
+            <span data-i18n="about.tag2">持续学习</span>
+            <span data-i18n="about.tag3">清晰表达</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-tinted" id="focus">
+      <div class="shell">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow" data-i18n="focus.eyebrow">Focus</p>
+          <h2 data-i18n="focus.title">关注方向</h2>
+          <p data-i18n="focus.subtitle">围绕真实问题，连接数据、技术与知识传播。</p>
+        </div>
+
+        <div class="card-grid focus-grid">
+          <article class="focus-card reveal">
+            <span class="card-number">01</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg>
+            </div>
+            <h3 data-i18n="focus.card1.title">数据与分析</h3>
+            <p data-i18n="focus.card1.text">从数据整理、探索到可视化，建立可解释、可复现的分析过程。</p>
+          </article>
+
+          <article class="focus-card reveal">
+            <span class="card-number">02</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-3 3.87V14a4 4 0 0 0 4 4h1v4M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1 3 3.87V14a4 4 0 0 1-4 4h-1v4M8 7h8M8 14h8"></path></svg>
+            </div>
+            <h3 data-i18n="focus.card2.title">人工智能应用</h3>
+            <p data-i18n="focus.card2.text">关注 AI 在研究、创作与日常工作中的实用价值，而不止是概念演示。</p>
+          </article>
+
+          <article class="focus-card reveal">
+            <span class="card-number">03</span>
+            <div class="focus-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16v14H7l-3 3V4Z"></path><path d="M8 9h8M8 13h5"></path></svg>
+            </div>
+            <h3 data-i18n="focus.card3.title">研究与传播</h3>
+            <p data-i18n="focus.card3.text">把复杂内容转化为结构清楚、可验证、便于行动的文章与作品。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" id="projects">
+      <div class="shell">
+        <div class="section-heading row-heading reveal">
+          <div>
+            <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
+            <h2 data-i18n="projects.title">公开项目</h2>
+          </div>
+          <a class="text-link" href="https://github.com/meiqingg" target="_blank" rel="noopener noreferrer">
+            <span data-i18n="projects.all">查看 GitHub</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="project-grid" id="project-grid" aria-live="polite">
+          <article class="project-card project-placeholder reveal">
+            <div class="project-topline"><span class="project-kind">GitHub</span><span>↗</span></div>
+            <h3 data-i18n="projects.loadingTitle">正在读取公开仓库</h3>
+            <p data-i18n="projects.loadingText">项目会从 GitHub 自动同步到这里。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-tinted" id="updates">
+      <div class="shell split-grid">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="updates.eyebrow">Updates</p>
+          <h2 data-i18n="updates.title">最近动态</h2>
+          <p data-i18n="updates.subtitle">这里记录值得分享的阶段性进展。</p>
+        </div>
+
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <time datetime="2026-06" data-i18n="updates.item1.date">2026 · 06</time>
+            <div>
+              <h3 data-i18n="updates.item1.title">个人主页上线</h3>
+              <p data-i18n="updates.item1.text">基于 GitHub Pages 建立个人作品与研究入口。</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026" data-i18n="updates.item2.date">进行中</time>
+            <div>
+              <h3 data-i18n="updates.item2.title">公开项目整理</h3>
+              <p data-i18n="updates.item2.text">未来的公开仓库会自动显示在项目区域。</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <time datetime="2026" data-i18n="updates.item3.date">开放</time>
+            <div>
+              <h3 data-i18n="updates.item3.title">交流与合作</h3>
+              <p data-i18n="updates.item3.text">欢迎围绕数据、AI 应用和知识传播展开交流。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad contact-section" id="contact">
+      <div class="shell contact-panel reveal">
+        <div>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.title">一起做有价值的事</h2>
+          <p data-i18n="contact.text">有项目、想法或合作机会，欢迎直接联系。</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-light" href="mailto:meiqingg@gmail.com">meiqingg@gmail.com</a>
+          <a class="button button-outline-light" href="https://github.com/meiqingg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span id="year"></span> Paco Lee.</p>
+      <p data-i18n="footer.note">由 GitHub Pages 托管 · 无追踪器</p>
+      <a href="#top" data-i18n="footer.back">返回顶部 ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
