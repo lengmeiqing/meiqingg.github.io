@@ -1,4 +1,4 @@
-# Paco Lee Personal Website
+# Zezhong Wang Personal Website
 
 一个无需构建工具、可直接发布到 GitHub Pages 的中英双语个人网站。
 
