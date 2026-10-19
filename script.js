@@ -1,6 +1,6 @@
 const heroVisual = document.querySelector('.hero-visual');
 const visualButtons = document.querySelectorAll('[data-visual-mode]');
-const visualModes = ['gf3', 'delft', 'stats', 'timeseries'];
+const visualModes = ['gf3', 'delft', 'timeseries', 'stats'];
 let visualIndex = 0;
 let visualTimer;
 function setVisualMode(mode) {

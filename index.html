@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-14" />
+  <link rel="stylesheet" href="styles.css?v=20261019-16" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -57,8 +57,8 @@
         <div class="visual-switch" role="group" aria-label="首屏视图">
           <button type="button" data-visual-mode="gf3" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
           <button type="button" data-visual-mode="delft" aria-pressed="false" data-zh="相位机理" data-en="Phase physics">相位机理</button>
-          <button type="button" data-visual-mode="stats" aria-pressed="false" data-zh="积雪统计" data-en="Snow statistics">积雪统计</button>
           <button type="button" data-visual-mode="timeseries" aria-pressed="false" data-zh="时序观测" data-en="Time series">时序观测</button>
+          <button type="button" data-visual-mode="stats" aria-pressed="false" data-zh="积雪统计" data-en="Snow statistics">积雪统计</button>
         </div>
         <article class="hero-case-study case-gf3">
           <a class="case-image" href="assets/img/gf3-greenland-glacier.png" target="_blank" rel="noreferrer" aria-label="查看高分三号格陵兰冰川伪彩色合成影像大图">
@@ -165,21 +165,47 @@
       <div class="capability-grid">
         <article class="cap-card featured">
           <div class="card-number">01</div>
-          <div class="polar-glyph" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+          <div class="simulation polar-simulation" aria-hidden="true">
+            <svg viewBox="0 0 320 190" role="presentation">
+              <g class="sim-grid"><ellipse cx="145" cy="95" rx="105" ry="68"/><ellipse cx="145" cy="95" rx="72" ry="47"/><ellipse cx="145" cy="95" rx="38" ry="25"/><path d="M40 95h210M145 27v136"/></g>
+              <path class="sim-trace trace-a" d="M40 102C70 97 78 48 116 64s41 79 76 53 36-50 58-27"/>
+              <path class="sim-trace trace-b" d="M42 112c31-6 43-38 72-31 31 8 31 54 65 45 33-9 38-43 70-30"/>
+              <g class="polar-sweep"><path d="M145 95L256 42"/><circle cx="145" cy="95" r="5"/></g>
+              <g class="sim-readout"><rect x="268" y="48" width="8" height="64"/><rect x="282" y="70" width="8" height="42"/><rect x="296" y="84" width="8" height="28"/></g>
+            </svg>
+            <span class="sim-label">SCATTERING RESPONSE</span>
+          </div>
           <h3>Polarimetric SAR</h3>
           <p data-zh="极化分解、散射建模、多频 PolSAR 分类与全局分割；博士研究聚焦 Freeman 三分量分解模型的适应性与稳定性。" data-en="Polarimetric decomposition, scattering models, multi-frequency classification and global segmentation. Doctoral work focused on improving the adaptability and stability of the Freeman three-component model.">极化分解、散射建模、多频 PolSAR 分类与全局分割；博士研究聚焦 Freeman 三分量分解模型的适应性与稳定性。</p>
           <ul><li>Scattering decomposition</li><li>Multi-frequency fusion</li><li>Deep segmentation</li></ul>
         </article>
         <article class="cap-card">
           <div class="card-number">02</div>
-          <div class="contour-icon" aria-hidden="true"></div>
+          <div class="simulation insar-simulation" aria-hidden="true">
+            <svg viewBox="0 0 320 190" role="presentation">
+              <g class="fringe-field"><ellipse cx="154" cy="103" rx="116" ry="64"/><ellipse cx="154" cy="103" rx="99" ry="55"/><ellipse cx="154" cy="103" rx="82" ry="46"/><ellipse cx="154" cy="103" rx="65" ry="37"/><ellipse cx="154" cy="103" rx="48" ry="28"/><ellipse cx="154" cy="103" rx="31" ry="18"/></g>
+              <path class="terrain-line" d="M26 141c38-11 58-39 91-34 37 6 49 34 84 18 29-14 48-13 91 2"/>
+              <g class="baseline"><path d="M74 35L228 29"/><circle cx="74" cy="35" r="6"/><circle cx="228" cy="29" r="6"/><path d="M74 35l72 68M228 29l-74 74"/></g>
+              <path class="phase-flow" d="M34 103h240"/>
+            </svg>
+            <span class="sim-label">PHASE / Δφ / COHERENCE</span>
+          </div>
           <h3>InSAR</h3>
           <p data-zh="干涉方法、跨基线成像、分辨率提升与大气改正；拥有机载双站 InSAR 外场与角反射器标定经验。" data-en="Interferometric methods, cross-baseline imaging, resolution enhancement and atmospheric correction, with hands-on bistatic airborne InSAR campaign calibration experience.">干涉方法、跨基线成像、分辨率提升与大气改正；拥有机载双站 InSAR 外场与角反射器标定经验。</p>
           <ul><li>Cross-baseline imaging</li><li>Atmospheric correction</li><li>Field calibration</li></ul>
         </article>
         <article class="cap-card">
           <div class="card-number">03</div>
-          <div class="orbit-icon" aria-hidden="true"><i></i></div>
+          <div class="simulation radar-simulation" aria-hidden="true">
+            <svg viewBox="0 0 320 190" role="presentation">
+              <g class="ground-grid"><path d="M49 142l102-40 124 29-105 43z"/><path d="M74 132l123 31M101 122l123 30M128 111l122 31M87 127l-18 31M126 112l-17 61M166 105l-16 69M207 114l-16 53M245 123l-15 33"/></g>
+              <path class="orbit-path" d="M28 58c75-48 188-44 270 15"/>
+              <g class="satellite"><rect x="130" y="38" width="34" height="18" rx="2"/><path d="M112 34h18v25h-18zM164 34h18v25h-18z"/><path d="M147 56l-42 82M151 56l91 82"/></g>
+              <path class="scan-footprint" d="M105 138l42-82 95 82-72 28z"/>
+              <circle class="radar-pulse" cx="170" cy="151" r="7"/>
+            </svg>
+            <span class="sim-label">ORBIT / SWATH / IMAGE FORMATION</span>
+          </div>
           <h3 data-zh="雷达成像与工程" data-en="Radar imaging & engineering">雷达成像与工程</h3>
           <p data-zh="从算法原型到任务系统：参与星载与机载 SAR 处理软件、成像软件、几何校正及电磁特征提取工具开发。" data-en="From algorithm prototypes to mission systems: spaceborne and airborne SAR processing, image formation, geometric correction and electromagnetic feature extraction.">从算法原型到任务系统：参与星载与机载 SAR 处理软件、成像软件、几何校正及电磁特征提取工具开发。</p>
           <ul><li>Image formation</li><li>Geometric correction</li><li>Mission calibration</li></ul>
@@ -382,6 +408,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-14"></script>
+  <script src="script.js?v=20261019-16"></script>
 </body>
 </html>
