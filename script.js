@@ -84,14 +84,33 @@ canvas.addEventListener('pointermove', e => {
 
 const heroVisual = document.querySelector('.hero-visual');
 const visualButtons = document.querySelectorAll('[data-visual-mode]');
+const visualModes = ['gf3', 'delft', 'radar'];
+let visualIndex = 0;
+let visualTimer;
 function setVisualMode(mode) {
-  const showCase = mode === 'case';
+  const showCase = mode !== 'radar';
   heroVisual.classList.toggle('show-case', showCase);
+  heroVisual.classList.toggle('show-gf3', mode === 'gf3');
+  heroVisual.classList.toggle('show-delft', mode === 'delft');
+  visualIndex = visualModes.indexOf(mode);
   visualButtons.forEach(button => {
     button.setAttribute('aria-pressed', String(button.dataset.visualMode === mode));
   });
 }
-visualButtons.forEach(button => button.addEventListener('click', () => setVisualMode(button.dataset.visualMode)));
+function startVisualCarousel() {
+  clearInterval(visualTimer);
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  visualTimer = setInterval(() => setVisualMode(visualModes[(visualIndex + 1) % visualModes.length]), 9000);
+}
+visualButtons.forEach(button => button.addEventListener('click', () => {
+  setVisualMode(button.dataset.visualMode);
+  startVisualCarousel();
+}));
+heroVisual.addEventListener('pointerenter', () => clearInterval(visualTimer));
+heroVisual.addEventListener('pointerleave', startVisualCarousel);
+heroVisual.addEventListener('focusin', () => clearInterval(visualTimer));
+heroVisual.addEventListener('focusout', startVisualCarousel);
+startVisualCarousel();
 
 const storage = {
   get(key) { try { return localStorage.getItem(key); } catch (_) { return null; } },

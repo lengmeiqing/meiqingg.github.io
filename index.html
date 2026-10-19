@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-10" />
+  <link rel="stylesheet" href="styles.css?v=20261019-11" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -53,9 +53,10 @@
         </div>
       </div>
 
-      <div class="hero-visual show-case" aria-label="高分三号格陵兰冰川极化 SAR 案例与交互式雷达扫描">
+      <div class="hero-visual show-case show-gf3" aria-label="格陵兰遥感案例轮播与交互式雷达扫描">
         <div class="visual-switch" role="group" aria-label="首屏视图">
-          <button type="button" data-visual-mode="case" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
+          <button type="button" data-visual-mode="gf3" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
+          <button type="button" data-visual-mode="delft" aria-pressed="false">TU Delft</button>
           <button type="button" data-visual-mode="radar" aria-pressed="false" data-zh="互动雷达" data-en="Radar scan">互动雷达</button>
         </div>
         <canvas id="radarCanvas"></canvas>
@@ -69,7 +70,7 @@
           <img src="assets/img/avatar.png" alt="Zezhong Wang" width="56" height="56" />
           <div><strong>Zezhong Wang</strong><span><i></i><span data-zh="欢迎交流与合作" data-en="Open to collaboration">欢迎交流与合作</span></span></div>
         </div>
-        <article class="hero-case-study">
+        <article class="hero-case-study case-gf3">
           <a class="case-image" href="assets/img/gf3-greenland-glacier.png" target="_blank" rel="noreferrer" aria-label="查看高分三号格陵兰冰川伪彩色合成影像大图">
             <img src="assets/img/gf3-greenland-glacier.webp" alt="高分三号在格陵兰岛获取的全极化 SAR 伪彩色合成影像" decoding="async">
             <span data-zh="查看完整影像 ↗" data-en="View full image ↗">查看完整影像 ↗</span>
@@ -84,6 +85,23 @@
               <span class="green"><b>G</b><em data-zh="体散射" data-en="Volume">体散射</em></span>
             </div>
             <a class="case-source" href="https://www.cnsa.gov.cn/english/n6465652/n6465653/c6649456/content.html" target="_blank" rel="noreferrer"><span data-zh="了解 GF-3" data-en="About GF-3">了解 GF-3</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
+        <article class="hero-case-study case-delft">
+          <a class="case-image" href="assets/img/tu-delft-closure-phase-concept.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 三联相位与相干性概念图大图">
+            <img src="assets/img/tu-delft-closure-phase-concept.webp" alt="TU Delft 研究中的三联相位与相干性分布概念图" decoding="async">
+            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">2022 / TU DELFT / SENTINEL-1</p>
+            <h2 data-zh="相位闭合中<br>隐藏的冰雪信息" data-en="Ice and snow signals<br>hidden in phase closure">相位闭合中<br>隐藏的冰雪信息</h2>
+            <p data-zh="这张概念图展示干涉对相干性分布与三联相位之间的关系：三联相位的统计结构可能保存体散射信息。交流研究进一步分析了2017—2020年格陵兰西南部200余景 Sentinel-1 C 波段 SAR 影像，建立雪层指数衰减模型，探索相位闭合、相干性、微波穿透深度与季节性融雪之间的联系。" data-en="This concept figure relates the coherence distribution of interferometric pairs to triplet phase, whose statistical structure may preserve volume-scattering information. The visiting research further analysed more than 200 Sentinel-1 C-band SAR scenes over southwest Greenland from 2017 to 2020, using a snow-based exponential-decay model to explore links among phase closure, coherence, microwave penetration depth and seasonal snowmelt.">这张概念图展示干涉对相干性分布与三联相位之间的关系：三联相位的统计结构可能保存体散射信息。交流研究进一步分析了2017—2020年格陵兰西南部200余景 Sentinel-1 C 波段 SAR 影像，建立雪层指数衰减模型，探索相位闭合、相干性、微波穿透深度与季节性融雪之间的联系。</p>
+            <div class="case-legend case-facts" aria-label="研究概览">
+              <span><b>200+</b><em data-zh="Sentinel-1 影像" data-en="Sentinel-1 scenes">Sentinel-1 影像</em></span>
+              <span><b>166</b><em data-zh="相位闭合样本" data-en="closure samples">相位闭合样本</em></span>
+              <span><b>4 YR</b><em data-zh="季节序列" data-en="seasonal series">季节序列</em></span>
+            </div>
+            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
         </article>
       </div>
@@ -328,6 +346,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-10"></script>
+  <script src="script.js?v=20261019-11"></script>
 </body>
 </html>
