@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-11" />
+  <link rel="stylesheet" href="styles.css?v=20261019-12" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -57,6 +57,8 @@
         <div class="visual-switch" role="group" aria-label="首屏视图">
           <button type="button" data-visual-mode="gf3" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
           <button type="button" data-visual-mode="delft" aria-pressed="false">TU Delft</button>
+          <button type="button" data-visual-mode="snow" aria-pressed="false" data-zh="雪层模型" data-en="Snow model">雪层模型</button>
+          <button type="button" data-visual-mode="accumulation" aria-pressed="false" data-zh="积雪累积" data-en="Accumulation">积雪累积</button>
           <button type="button" data-visual-mode="radar" aria-pressed="false" data-zh="互动雷达" data-en="Radar scan">互动雷达</button>
         </div>
         <canvas id="radarCanvas"></canvas>
@@ -100,6 +102,40 @@
               <span><b>200+</b><em data-zh="Sentinel-1 影像" data-en="Sentinel-1 scenes">Sentinel-1 影像</em></span>
               <span><b>166</b><em data-zh="相位闭合样本" data-en="closure samples">相位闭合样本</em></span>
               <span><b>4 YR</b><em data-zh="季节序列" data-en="seasonal series">季节序列</em></span>
+            </div>
+            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
+        <article class="hero-case-study case-snow">
+          <a class="case-image" href="assets/img/tu-delft-snow-phase-model.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 雪层相位与雷达穿透深度模型大图">
+            <img src="assets/img/tu-delft-snow-phase-model.webp" alt="TU Delft 研究中的干雪、雪水混合物与水的相位和穿透深度模型" decoding="async">
+            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">TU DELFT / SNOW MODEL / INSAR</p>
+            <h2 data-zh="从雪到水，<br>理解相位变化" data-en="From snow to water:<br>interpreting phase change">从雪到水，<br>理解相位变化</h2>
+            <p data-zh="该图把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，介电性质与有效穿透深度发生变化，参与干涉的散射层减少，进而改变相干性和相位闭合的统计特征。这一物理解释支撑利用 Sentinel-1 季节时间序列感知格陵兰融雪过程。" data-en="The figure connects scatterer phase within a pixel, local triplet-phase randomness and radar penetration depth. As dry snow transitions to a snow-water mixture and then water, dielectric properties and effective penetration depth change, reducing the number of scattering layers contributing to the interferogram and altering the statistics of coherence and phase closure. This physical interpretation supports sensing Greenland snowmelt with seasonal Sentinel-1 time series.">该图把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，介电性质与有效穿透深度发生变化，参与干涉的散射层减少，进而改变相干性和相位闭合的统计特征。这一物理解释支撑利用 Sentinel-1 季节时间序列感知格陵兰融雪过程。</p>
+            <div class="case-legend case-facts" aria-label="雪层状态">
+              <span><b>SNOW</b><em data-zh="深穿透 · 多层散射" data-en="deep · layered">深穿透 · 多层散射</em></span>
+              <span><b>MIX</b><em data-zh="融雪过渡" data-en="melt transition">融雪过渡</em></span>
+              <span><b>WATER</b><em data-zh="浅穿透 · 少层散射" data-en="shallow · fewer layers">浅穿透 · 少层散射</em></span>
+            </div>
+            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
+        <article class="hero-case-study case-accumulation">
+          <a class="case-image" href="assets/img/tu-delft-snow-accumulation.png" target="_blank" rel="noreferrer" aria-label="查看九月至次年五月积雪累积模拟大图">
+            <img src="assets/img/tu-delft-snow-accumulation.webp" alt="九月至次年五月均匀降雪与随机降雪情景下的积雪累积示意图" decoding="async">
+            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">SEP—MAY / SNOW ACCUMULATION / GREENLAND</p>
+            <h2 data-zh="9月至次年5月，<br>雪量持续累积" data-en="September to May:<br>seasonal snow accumulation">9月至次年5月，<br>雪量持续累积</h2>
+            <p data-zh="该图模拟每年9月至次年5月的积雪累积过程，这一时期整体雪量呈增加趋势。左图采用均匀降雪假设，展示稳定的逐月累积；右图引入随机降雪，表示各次降雪发生的时间与强度并不均匀。模拟将降雪时间序列与雪层结构及雷达穿透深度联系起来，为解释闭合相位的季节变化提供物理背景。" data-en="The figure models snow accumulation from September to the following May, a period of overall increasing snow mass. The left panel assumes uniform snowfall and shows steady monthly accumulation; the right introduces random snowfall, reflecting uneven timing and intensity of individual events. The simulation links snowfall time series to snow structure and radar penetration depth, providing physical context for seasonal changes in phase closure.">该图模拟每年9月至次年5月的积雪累积过程，这一时期整体雪量呈增加趋势。左图采用均匀降雪假设，展示稳定的逐月累积；右图引入随机降雪，表示各次降雪发生的时间与强度并不均匀。模拟将降雪时间序列与雪层结构及雷达穿透深度联系起来，为解释闭合相位的季节变化提供物理背景。</p>
+            <div class="case-legend case-facts" aria-label="积雪季节阶段">
+              <span><b>SEP</b><em data-zh="累积期开始" data-en="accumulation begins">累积期开始</em></span>
+              <span><b>WINTER</b><em data-zh="持续降雪" data-en="continued snowfall">持续降雪</em></span>
+              <span><b>MAY</b><em data-zh="累积期结束" data-en="accumulation ends">累积期结束</em></span>
             </div>
             <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
@@ -346,6 +382,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-11"></script>
+  <script src="script.js?v=20261019-12"></script>
 </body>
 </html>
