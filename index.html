@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-12" />
+  <link rel="stylesheet" href="styles.css?v=20261019-13" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -59,6 +59,8 @@
           <button type="button" data-visual-mode="delft" aria-pressed="false">TU Delft</button>
           <button type="button" data-visual-mode="snow" aria-pressed="false" data-zh="雪层模型" data-en="Snow model">雪层模型</button>
           <button type="button" data-visual-mode="accumulation" aria-pressed="false" data-zh="积雪累积" data-en="Accumulation">积雪累积</button>
+          <button type="button" data-visual-mode="timeseries" aria-pressed="false" data-zh="时序观测" data-en="Time series">时序观测</button>
+          <button type="button" data-visual-mode="moran" aria-pressed="false" data-zh="定量统计" data-en="Statistics">定量统计</button>
           <button type="button" data-visual-mode="radar" aria-pressed="false" data-zh="互动雷达" data-en="Radar scan">互动雷达</button>
         </div>
         <canvas id="radarCanvas"></canvas>
@@ -136,6 +138,40 @@
               <span><b>SEP</b><em data-zh="累积期开始" data-en="accumulation begins">累积期开始</em></span>
               <span><b>WINTER</b><em data-zh="持续降雪" data-en="continued snowfall">持续降雪</em></span>
               <span><b>MAY</b><em data-zh="累积期结束" data-en="accumulation ends">累积期结束</em></span>
+            </div>
+            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
+        <article class="hero-case-study case-timeseries">
+          <a class="case-image" href="assets/img/greenland-phase-closure-timeseries.png" target="_blank" rel="noreferrer" aria-label="查看格陵兰相位闭合时序观测大图">
+            <img src="assets/img/greenland-phase-closure-timeseries.webp" alt="2017年1月至2020年1月格陵兰 Sentinel-1 相位闭合时序观测结果" decoding="async">
+            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">2017.01—2020.01 / SENTINEL-1 / GREENLAND</p>
+            <h2 data-zh="时间序列中的<br>冰川冻融节律" data-en="Glacier freeze–thaw<br>rhythms in time series">时间序列中的<br>冰川冻融节律</h2>
+            <p data-zh="图中展示2017年1月至2020年1月基于欧洲航天局 Sentinel-1 数据对格陵兰岛研究区开展的时序观测。不同日期的相位闭合空间纹理呈现重复的季节性变化，说明 SAR 信号的周期响应与冰川积雪、融化及再冻结过程相耦合，为从长时序雷达观测识别冻融机制提供了直接证据。" data-en="The figure presents a time-series observation of a Greenland study site using ESA Sentinel-1 data from January 2017 to January 2020. The spatial texture of phase closure repeats seasonally across acquisition dates, indicating that periodic SAR responses are coupled with snow accumulation, melt and refreezing processes and providing direct evidence for identifying glacier freeze–thaw mechanisms from long radar time series.">图中展示2017年1月至2020年1月基于欧洲航天局 Sentinel-1 数据对格陵兰岛研究区开展的时序观测。不同日期的相位闭合空间纹理呈现重复的季节性变化，说明 SAR 信号的周期响应与冰川积雪、融化及再冻结过程相耦合，为从长时序雷达观测识别冻融机制提供了直接证据。</p>
+            <div class="case-legend case-facts" aria-label="时序观测概览">
+              <span><b>ESA</b><em>Sentinel-1</em></span>
+              <span><b>3 YR</b><em data-zh="连续观测" data-en="observation">连续观测</em></span>
+              <span><b>±45°</b><em data-zh="闭合相位" data-en="closure phase">闭合相位</em></span>
+            </div>
+            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
+        <article class="hero-case-study case-moran">
+          <a class="case-image" href="assets/img/greenland-morans-i-statistics.png" target="_blank" rel="noreferrer" aria-label="查看格陵兰相位闭合空间自相关统计大图">
+            <img src="assets/img/greenland-morans-i-statistics.webp" alt="2017至2020年格陵兰相位闭合 Moran's I 空间自相关统计曲线" decoding="async">
+            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">MORAN'S I / PHASE CLOSURE / QUANTIFICATION</p>
+            <h2 data-zh="用空间自相关<br>量化融化起点" data-en="Quantifying melt onset<br>with spatial autocorrelation">用空间自相关<br>量化融化起点</h2>
+            <p data-zh="这是图1的定量统计结果。Moran’s I 用于刻画相位闭合信号的空间自相关强度；曲线在2018年4月17日与2019年5月24日出现两个主要高峰，反映夏季来临、冰川开始融化前后的关键转折。定量指标把视觉纹理转化为可比较的季节信号，使冻融起点能够在多年序列中被识别。" data-en="This is the quantitative analysis of Figure 1. Moran’s I measures the spatial autocorrelation of phase-closure signals. Two major peaks on 17 April 2018 and 24 May 2019 capture key transitions around the onset of glacier melt as summer approaches. The metric converts visual texture into a comparable seasonal signal, enabling melt onset to be identified across multiple years.">这是图1的定量统计结果。Moran’s I 用于刻画相位闭合信号的空间自相关强度；曲线在2018年4月17日与2019年5月24日出现两个主要高峰，反映夏季来临、冰川开始融化前后的关键转折。定量指标把视觉纹理转化为可比较的季节信号，使冻融起点能够在多年序列中被识别。</p>
+            <div class="case-legend case-facts" aria-label="空间自相关峰值">
+              <span><b>2018.04.17</b><em data-zh="主要高峰" data-en="major peak">主要高峰</em></span>
+              <span><b>2019.05.24</b><em data-zh="主要高峰" data-en="major peak">主要高峰</em></span>
+              <span><b>MORAN I</b><em data-zh="空间自相关" data-en="spatial autocorrelation">空间自相关</em></span>
             </div>
             <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
@@ -382,6 +418,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-12"></script>
+  <script src="script.js?v=20261019-13"></script>
 </body>
 </html>

@@ -84,7 +84,7 @@ canvas.addEventListener('pointermove', e => {
 
 const heroVisual = document.querySelector('.hero-visual');
 const visualButtons = document.querySelectorAll('[data-visual-mode]');
-const visualModes = ['gf3', 'delft', 'snow', 'accumulation', 'radar'];
+const visualModes = ['gf3', 'delft', 'snow', 'accumulation', 'timeseries', 'moran', 'radar'];
 let visualIndex = 0;
 let visualTimer;
 function setVisualMode(mode) {
@@ -94,6 +94,8 @@ function setVisualMode(mode) {
   heroVisual.classList.toggle('show-delft', mode === 'delft');
   heroVisual.classList.toggle('show-snow', mode === 'snow');
   heroVisual.classList.toggle('show-accumulation', mode === 'accumulation');
+  heroVisual.classList.toggle('show-timeseries', mode === 'timeseries');
+  heroVisual.classList.toggle('show-moran', mode === 'moran');
   visualIndex = visualModes.indexOf(mode);
   visualButtons.forEach(button => {
     button.setAttribute('aria-pressed', String(button.dataset.visualMode === mode));
