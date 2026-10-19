@@ -17,9 +17,10 @@
 .app-links a{font:500 .66rem var(--mono);border:1px solid var(--line);border-radius:99px;padding:7px 11px;transition:.2s}
 .app-links a:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .method-figure{margin:44px 0 0;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.45fr);border:1px solid var(--line);background:var(--paper);overflow:hidden}
-.method-image{display:block;min-width:0;background:#dff0ef;overflow:hidden}
+.method-image{display:block;min-width:0;background:#dff0ef;overflow:hidden;position:relative}
 .method-image img{display:block;width:100%;height:100%;min-height:420px;object-fit:contain;transition:transform .45s ease}
 .method-image:hover img{transform:scale(1.012)}
+.method-image>span{position:absolute;right:16px;bottom:16px;padding:8px 11px;background:rgba(7,27,30,.88);color:var(--paper);font:500 .6rem var(--mono);letter-spacing:.04em;border-radius:2px}
 .method-figure figcaption{padding:34px;display:flex;flex-direction:column;border-left:1px solid var(--line)}
 .method-figure h3{font-size:1.45rem;line-height:1.25;letter-spacing:-.035em;margin:38px 0 15px}
 .method-figure p{font-size:.88rem;color:#52615d}
