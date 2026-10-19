@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-9" />
+  <link rel="stylesheet" href="styles.css?v=20261019-10" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -53,18 +53,39 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="交互式合成孔径雷达扫描示意图">
+      <div class="hero-visual show-case" aria-label="高分三号格陵兰冰川极化 SAR 案例与交互式雷达扫描">
+        <div class="visual-switch" role="group" aria-label="首屏视图">
+          <button type="button" data-visual-mode="case" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
+          <button type="button" data-visual-mode="radar" aria-pressed="false" data-zh="互动雷达" data-en="Radar scan">互动雷达</button>
+        </div>
         <canvas id="radarCanvas"></canvas>
-        <div class="hud hud-top"><span>SAR / POL</span><span class="live">LIVE</span></div>
-        <div class="hud hud-side" aria-hidden="true"><span>74°N</span><span>68°N</span><span>62°N</span></div>
-        <div class="hud hud-bottom">
+        <div class="hud hud-top radar-ui"><span>SAR / POL</span><span class="live">LIVE</span></div>
+        <div class="hud hud-side radar-ui" aria-hidden="true"><span>74°N</span><span>68°N</span><span>62°N</span></div>
+        <div class="hud hud-bottom radar-ui">
           <span>HH</span><span>HV</span><span>VV</span><span>Δφ</span>
         </div>
-        <div class="scan-caption"><span data-zh="移动指针，探索回波" data-en="Move to interrogate echoes">移动指针，探索回波</span><b id="signalValue">−18.4 dB</b></div>
-        <div class="profile-chip">
+        <div class="scan-caption radar-ui"><span data-zh="移动指针，探索回波" data-en="Move to interrogate echoes">移动指针，探索回波</span><b id="signalValue">−18.4 dB</b></div>
+        <div class="profile-chip radar-ui">
           <img src="assets/img/avatar.png" alt="Zezhong Wang" width="56" height="56" />
           <div><strong>Zezhong Wang</strong><span><i></i><span data-zh="欢迎交流与合作" data-en="Open to collaboration">欢迎交流与合作</span></span></div>
         </div>
+        <article class="hero-case-study">
+          <a class="case-image" href="assets/img/gf3-greenland-glacier.png" target="_blank" rel="noreferrer" aria-label="查看高分三号格陵兰冰川伪彩色合成影像大图">
+            <img src="assets/img/gf3-greenland-glacier.webp" alt="高分三号在格陵兰岛获取的全极化 SAR 伪彩色合成影像" decoding="async">
+            <span data-zh="查看完整影像 ↗" data-en="View full image ↗">查看完整影像 ↗</span>
+          </a>
+          <div class="case-copy">
+            <p class="case-kicker">2019.07.08 / GF-3 / GREENLAND</p>
+            <h2 data-zh="从散射色彩<br>识别冰体状态" data-en="Reading ice states<br>through scattering colour">从散射色彩<br>识别冰体状态</h2>
+            <p data-zh="2019年7月8日，高分三号（GF-3）在格陵兰岛上空单轨连续获取16景全极化 SAR 数据。经极化分解后，以单次散射、二次散射和体散射分别映射至蓝、红、绿通道，生成伪彩色合成影像。影像中的颜色差异揭示了不同冰体状态对应的散射机制变化，展示了利用 GF-3 全极化观测反演冰川冻融结构的潜力。" data-en="On 8 July 2019, GF-3 acquired 16 fully polarimetric SAR scenes along a single orbit over Greenland. After polarimetric decomposition, single-bounce, double-bounce and volume scattering were mapped to the blue, red and green channels to create this false-colour composite. The colour contrasts reveal changes in scattering mechanisms across different ice states, demonstrating the potential of GF-3 full-polarimetric observations for retrieving glacier freeze–thaw structure.">2019年7月8日，高分三号（GF-3）在格陵兰岛上空单轨连续获取16景全极化 SAR 数据。经极化分解后，以单次散射、二次散射和体散射分别映射至蓝、红、绿通道，生成伪彩色合成影像。影像中的颜色差异揭示了不同冰体状态对应的散射机制变化，展示了利用 GF-3 全极化观测反演冰川冻融结构的潜力。</p>
+            <div class="case-legend" aria-label="极化分解通道">
+              <span class="blue"><b>B</b><em data-zh="单次散射" data-en="Single-bounce">单次散射</em></span>
+              <span class="red"><b>R</b><em data-zh="二次散射" data-en="Double-bounce">二次散射</em></span>
+              <span class="green"><b>G</b><em data-zh="体散射" data-en="Volume">体散射</em></span>
+            </div>
+            <a class="case-source" href="https://www.cnsa.gov.cn/english/n6465652/n6465653/c6649456/content.html" target="_blank" rel="noreferrer"><span data-zh="了解 GF-3" data-en="About GF-3">了解 GF-3</span><b aria-hidden="true">↗</b></a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -304,6 +325,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-8"></script>
+  <script src="script.js?v=20261019-10"></script>
 </body>
 </html>

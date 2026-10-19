@@ -82,6 +82,17 @@ canvas.addEventListener('pointermove', e => {
   signal.textContent = `${(-7 - pointer.y * 21 + Math.sin(pointer.x * 9) * 2).toFixed(1)} dB`;
 });
 
+const heroVisual = document.querySelector('.hero-visual');
+const visualButtons = document.querySelectorAll('[data-visual-mode]');
+function setVisualMode(mode) {
+  const showCase = mode === 'case';
+  heroVisual.classList.toggle('show-case', showCase);
+  visualButtons.forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.visualMode === mode));
+  });
+}
+visualButtons.forEach(button => button.addEventListener('click', () => setVisualMode(button.dataset.visualMode)));
+
 const storage = {
   get(key) { try { return localStorage.getItem(key); } catch (_) { return null; } },
   set(key, value) { try { localStorage.setItem(key, value); } catch (_) {} }
