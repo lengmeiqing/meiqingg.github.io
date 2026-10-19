@@ -3,221 +3,230 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Zezhong Wang 的个人主页：项目、研究兴趣、动态与联系方式。" />
-  <meta name="theme-color" content="#17253f" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Zezhong Wang — Portfolio" />
-  <meta property="og:description" content="项目、研究兴趣、动态与联系方式。" />
-  <meta property="og:image" content="assets/img/social-card.svg" />
-  <title>Zezhong Wang — Portfolio</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer src="assets/js/content.js"></script>
-  <script defer src="assets/js/main.js"></script>
+  <meta name="description" content="Zezhong Wang 的个人遥感研究与工程作品集，聚焦极化 SAR、InSAR、雷达成像与多源遥感融合。" />
+  <meta name="theme-color" content="#061b1f" />
+  <title>Zezhong Wang — Remote Sensing Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
-
-  <header class="site-header" id="top">
-    <div class="shell nav-wrap">
-      <a class="brand" href="#top" aria-label="返回首页">
-        <span class="brand-mark" aria-hidden="true">ZW</span>
-        <span class="brand-name">Zezhong Wang</span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">打开导航</span>
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="主要导航">
-        <a href="#about" data-i18n="nav.about">关于</a>
-        <a href="#focus" data-i18n="nav.focus">方向</a>
-        <a href="#projects" data-i18n="nav.projects">项目</a>
-        <a href="#updates" data-i18n="nav.updates">动态</a>
-        <a href="#contact" data-i18n="nav.contact">联系</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button class="icon-button" id="language-toggle" type="button" aria-label="切换语言" title="中 / EN">中</button>
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换深浅色主题" title="切换主题">
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
-        </button>
-      </div>
-    </div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">
+      <span class="brand-mark" aria-hidden="true"><i></i></span>
+      <span>Z. WANG</span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#capabilities" data-zh="能力" data-en="Capabilities">能力</a>
+      <a href="#applications" data-zh="应用" data-en="Applications">应用</a>
+      <a href="#missions" data-zh="项目" data-en="Missions">项目</a>
+      <a href="#research" data-zh="研究" data-en="Research">研究</a>
+    </nav>
+    <button class="lang-toggle" type="button" aria-label="Switch language">EN</button>
   </header>
 
-  <main id="main">
-    <section class="hero section-pad">
-      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal">
-          <p class="eyebrow" data-i18n="hero.eyebrow">个人主页 · 项目与研究</p>
-          <h1>
-            <span data-i18n="hero.greeting">你好，我是</span>
-            <strong>Zezhong Wang</strong>
-          </h1>
-          <p class="hero-lead" data-i18n="hero.lead">把研究、技术与想法整理成可被看见、使用和延续的作品。</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects" data-i18n="hero.primaryCta">查看项目</a>
-            <a class="button button-ghost" href="mailto:meiqingg@gmail.com" data-i18n="hero.secondaryCta">联系我</a>
-          </div>
-          <dl class="hero-stats" aria-label="GitHub 公开数据">
-            <div><dt id="repo-count">—</dt><dd data-i18n="stats.repos">公开仓库</dd></div>
-            <div><dt id="follower-count">—</dt><dd data-i18n="stats.followers">关注者</dd></div>
-            <div><dt id="github-status">Live</dt><dd data-i18n="stats.status">持续更新</dd></div>
-          </dl>
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span><span data-zh="遥感科学家 · 雷达工程师" data-en="REMOTE SENSING SCIENTIST · RADAR ENGINEER">遥感科学家 · 雷达工程师</span></div>
+        <h1 data-zh="从雷达回波，<br>看到地表结构。" data-en="From radar echoes<br>to surface intelligence.">从雷达回波，<br>看到地表结构。</h1>
+        <p class="hero-lead" data-zh="我是 Zezhong Wang，专注于极化 SAR、InSAR、雷达成像与多源遥感融合，把复杂电磁信息转化为可解释、可验证的地球观测结果。" data-en="I'm Zezhong Wang. I work across polarimetric SAR, InSAR, radar imaging and multi-source fusion—turning complex electromagnetic signals into interpretable, verifiable Earth observations.">我是 Zezhong Wang，专注于极化 SAR、InSAR、雷达成像与多源遥感融合，把复杂电磁信息转化为可解释、可验证的地球观测结果。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#missions"><span data-zh="查看代表项目" data-en="Explore selected work">查看代表项目</span><b aria-hidden="true">↘</b></a>
+          <a class="button ghost" href="https://orcid.org/0000-0002-5778-3769" target="_blank" rel="noreferrer">ORCID <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="signal-stats" aria-label="专业概览">
+          <div><strong>Ph.D.</strong><span data-zh="摄影测量与遥感" data-en="Photogrammetry & RS">摄影测量与遥感</span></div>
+          <div><strong>PolSAR</strong><span data-zh="分解 · 分类 · 分割" data-en="Decomposition · Classification">分解 · 分类 · 分割</span></div>
+          <div><strong>InSAR</strong><span data-zh="方法 · 成像 · 标定" data-en="Methods · Imaging · Calibration">方法 · 成像 · 标定</span></div>
+        </div>
+      </div>
 
-        <div class="hero-portrait-wrap reveal" aria-label="Zezhong Wang 的 GitHub 头像">
-          <div class="portrait-frame">
-            <img class="portrait" src="assets/img/avatar.png" alt="Zezhong Wang 的 GitHub 头像" width="512" height="512" />
-          </div>
-          <div class="availability-card">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span data-i18n="hero.availability">欢迎交流与合作</span>
-          </div>
+      <div class="hero-visual" aria-label="交互式合成孔径雷达扫描示意图">
+        <canvas id="radarCanvas"></canvas>
+        <div class="hud hud-top"><span>SAR / POL</span><span class="live">LIVE</span></div>
+        <div class="hud hud-side" aria-hidden="true"><span>74°N</span><span>68°N</span><span>62°N</span></div>
+        <div class="hud hud-bottom">
+          <span>HH</span><span>HV</span><span>VV</span><span>Δφ</span>
+        </div>
+        <div class="scan-caption"><span data-zh="移动指针，探索回波" data-en="Move to interrogate echoes">移动指针，探索回波</span><b id="signalValue">−18.4 dB</b></div>
+      </div>
+    </section>
+
+    <section class="statement section-shell" aria-labelledby="statement-title">
+      <p class="section-index">01 / APPROACH</p>
+      <h2 id="statement-title" data-zh="遥感不是一张漂亮的图。<br>它是一条从物理机理到可靠判断的证据链。" data-en="Remote sensing is not a pretty image.<br>It is an evidence chain from physics to decisions.">遥感不是一张漂亮的图。<br>它是一条从物理机理到可靠判断的证据链。</h2>
+      <div class="approach-flow" aria-label="遥感工作流">
+        <div><span>01</span><strong data-zh="理解散射" data-en="Understand">理解散射</strong><small data-zh="极化机理与电磁特征" data-en="Scattering physics">极化机理与电磁特征</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>02</span><strong data-zh="重建信息" data-en="Reconstruct">重建信息</strong><small data-zh="成像、标定与干涉" data-en="Imaging & calibration">成像、标定与干涉</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>03</span><strong data-zh="提取语义" data-en="Interpret">提取语义</strong><small data-zh="分类、分割与融合" data-en="Classification & fusion">分类、分割与融合</small></div>
+        <i aria-hidden="true"></i>
+        <div><span>04</span><strong data-zh="支持决策" data-en="Decide">支持决策</strong><small data-zh="可解释、可复核的结果" data-en="Traceable evidence">可解释、可复核的结果</small></div>
+      </div>
+    </section>
+
+    <section id="capabilities" class="capabilities section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">02 / CAPABILITIES</p><h2 data-zh="能力坐标" data-en="Capability map">能力坐标</h2></div>
+        <p data-zh="覆盖从雷达信号处理到地学信息提取的完整链路，同时保持对物理可解释性与工程可用性的关注。" data-en="An end-to-end view from radar signal processing to geospatial interpretation, grounded in physical explainability and engineering usability.">覆盖从雷达信号处理到地学信息提取的完整链路，同时保持对物理可解释性与工程可用性的关注。</p>
+      </div>
+      <div class="capability-grid">
+        <article class="cap-card featured">
+          <div class="card-number">01</div>
+          <div class="polar-glyph" aria-hidden="true"><span></span><span></span><span></span><i></i></div>
+          <h3>Polarimetric SAR</h3>
+          <p data-zh="极化分解、散射建模、多频 PolSAR 分类与全局分割；博士研究聚焦 Freeman 三分量分解模型的适应性与稳定性。" data-en="Polarimetric decomposition, scattering models, multi-frequency classification and global segmentation. Doctoral work focused on improving the adaptability and stability of the Freeman three-component model.">极化分解、散射建模、多频 PolSAR 分类与全局分割；博士研究聚焦 Freeman 三分量分解模型的适应性与稳定性。</p>
+          <ul><li>Scattering decomposition</li><li>Multi-frequency fusion</li><li>Deep segmentation</li></ul>
+        </article>
+        <article class="cap-card">
+          <div class="card-number">02</div>
+          <div class="contour-icon" aria-hidden="true"></div>
+          <h3>InSAR</h3>
+          <p data-zh="干涉方法、跨基线成像、分辨率提升与大气改正；拥有机载双站 InSAR 外场与角反射器标定经验。" data-en="Interferometric methods, cross-baseline imaging, resolution enhancement and atmospheric correction, with hands-on bistatic airborne InSAR campaign calibration experience.">干涉方法、跨基线成像、分辨率提升与大气改正；拥有机载双站 InSAR 外场与角反射器标定经验。</p>
+          <ul><li>Cross-baseline imaging</li><li>Atmospheric correction</li><li>Field calibration</li></ul>
+        </article>
+        <article class="cap-card">
+          <div class="card-number">03</div>
+          <div class="orbit-icon" aria-hidden="true"><i></i></div>
+          <h3 data-zh="雷达成像与工程" data-en="Radar imaging & engineering">雷达成像与工程</h3>
+          <p data-zh="从算法原型到任务系统：参与星载与机载 SAR 处理软件、成像软件、几何校正及电磁特征提取工具开发。" data-en="From algorithm prototypes to mission systems: spaceborne and airborne SAR processing, image formation, geometric correction and electromagnetic feature extraction.">从算法原型到任务系统：参与星载与机载 SAR 处理软件、成像软件、几何校正及电磁特征提取工具开发。</p>
+          <ul><li>Image formation</li><li>Geometric correction</li><li>Mission calibration</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="applications" class="applications section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">03 / APPLICATIONS</p><h2 data-zh="把遥感能力放进场景" data-en="Remote sensing in context">把遥感能力放进场景</h2></div>
+        <p data-zh="每个方向都连接到已发表研究或权威数据入口，让方法、数据与应用可以被快速核验。" data-en="Each direction connects to published evidence or an authoritative data portal, making methods, data and applications easy to verify.">每个方向都连接到已发表研究或权威数据入口，让方法、数据与应用可以被快速核验。</p>
+      </div>
+      <div class="application-grid">
+        <article class="application-card">
+          <span class="app-tag">CLASSIFICATION</span>
+          <h3 data-zh="地物精细分类" data-en="Fine land-cover classification">地物精细分类</h3>
+          <p data-zh="融合多频、多极化特征，提高复杂地物类别的区分能力，并通过全局分割保持空间结构连续性。" data-en="Fuse multi-frequency and multi-polarimetric features to distinguish complex land-cover classes while preserving spatial continuity through global segmentation.">融合多频、多极化特征，提高复杂地物类别的区分能力，并通过全局分割保持空间结构连续性。</p>
+          <div class="app-links"><a href="https://doi.org/10.1080/2150704X.2025.2470884" target="_blank" rel="noreferrer" data-zh="研究论文 ↗" data-en="Research paper ↗">研究论文 ↗</a><a href="https://www.mdpi.com/2072-4292/16/2/380" target="_blank" rel="noreferrer" data-zh="分割研究 ↗" data-en="Segmentation study ↗">分割研究 ↗</a></div>
+        </article>
+        <article class="application-card">
+          <span class="app-tag">URBAN</span>
+          <h3 data-zh="城市建筑提取" data-en="Urban structure extraction">城市建筑提取</h3>
+          <p data-zh="利用多波段 PolSAR 的散射差异、配准与融合，自动提取建筑轮廓，并支持震害信息识别研究。" data-en="Use multi-band PolSAR scattering differences, registration and fusion for automatic building-footprint extraction and earthquake-damage research.">利用多波段 PolSAR 的散射差异、配准与融合，自动提取建筑轮廓，并支持震害信息识别研究。</p>
+          <div class="app-links"><a href="https://doi.org/10.11999/JEIT220776" target="_blank" rel="noreferrer" data-zh="建筑提取论文 ↗" data-en="Building extraction paper ↗">建筑提取论文 ↗</a></div>
+        </article>
+        <article class="application-card">
+          <span class="app-tag">DEFORMATION</span>
+          <h3 data-zh="形变与灾害监测" data-en="Deformation & hazards">形变与灾害监测</h3>
+          <p data-zh="以 InSAR、跨基线成像和大气改正支撑地表形变观测，从数据质量到现场标定建立可靠链路。" data-en="Use InSAR, cross-baseline imaging and atmospheric correction to support surface-deformation monitoring from data quality through field calibration.">以 InSAR、跨基线成像和大气改正支撑地表形变观测，从数据质量到现场标定建立可靠链路。</p>
+          <div class="app-links"><a href="https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-1" target="_blank" rel="noreferrer">Sentinel-1 ↗</a><a href="https://www.dlr.de/en/research-and-transfer/projects-and-missions/terrasar-x/data-access-and-products" target="_blank" rel="noreferrer">TerraSAR-X ↗</a></div>
+        </article>
+        <article class="application-card exploring">
+          <span class="app-tag" data-zh="正在拓展" data-en="EXPLORING">正在拓展</span>
+          <h3 data-zh="森林与环境证据" data-en="Forest & environmental evidence">森林与环境证据</h3>
+          <p data-zh="将雷达、光学、光谱与地面观测组织成可追溯证据，面向森林健康、土地变化与环境报告。" data-en="Organise radar, optical, spectral and field observations into traceable evidence for forest health, land change and environmental reporting.">将雷达、光学、光谱与地面观测组织成可追溯证据，面向森林健康、土地变化与环境报告。</p>
+          <div class="app-links"><a href="https://doi.org/10.1111/efp.12669" target="_blank" rel="noreferrer" data-zh="森林健康研究 ↗" data-en="Forest health study ↗">森林健康研究 ↗</a><a href="https://www.eorc.jaxa.jp/ALOS/en/dataset/palsar2_l22_e.htm" target="_blank" rel="noreferrer">PALSAR-2 ↗</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="missions" class="missions section-shell">
+      <div class="section-heading inverse">
+        <div><p class="section-index">04 / SELECTED WORK</p><h2 data-zh="让算法进入真实任务" data-en="Taking algorithms into missions">让算法进入真实任务</h2></div>
+        <p data-zh="研究、软件与外场工作共同构成能力证明。以下项目均来自个人履历。" data-en="Research, software and field deployment form one continuous practice. All projects below are drawn from the CV.">研究、软件与外场工作共同构成能力证明。以下项目均来自个人履历。</p>
+      </div>
+      <div class="mission-list">
+        <article class="mission active" tabindex="0">
+          <div class="mission-meta"><span>2019—2020</span><em>ESA / EE10</em></div>
+          <div><h3>Harmony Phase 0 Science</h3><p data-zh="参与 ESA 地球探索者 10 号候选任务可行性研究，将干涉 SAR 方法置于下一代协同观测概念中验证。" data-en="Contributed to the ESA Earth Explorer 10 candidate feasibility study, exploring interferometric SAR methods in a next-generation companion-observation concept.">参与 ESA 地球探索者 10 号候选任务可行性研究，将干涉 SAR 方法置于下一代协同观测概念中验证。</p></div>
+          <span class="mission-arrow">↗</span>
+        </article>
+        <article class="mission" tabindex="0">
+          <div class="mission-meta"><span>2015—2017</span><em>GF-3</em></div>
+          <div><h3 data-zh="高分三号极化数据处理" data-en="GF-3 Polarimetric Processing">高分三号极化数据处理</h3><p data-zh="面向我国首颗 C 波段多极化 SAR 卫星，开展极化数据处理、性能评估与目标电磁特征提取软件研发。" data-en="Polarimetric processing, performance assessment and target electromagnetic-feature extraction for China's C-band multi-polarization SAR mission.">面向我国首颗 C 波段多极化 SAR 卫星，开展极化数据处理、性能评估与目标电磁特征提取软件研发。</p></div>
+          <span class="mission-arrow">↗</span>
+        </article>
+        <article class="mission" tabindex="0">
+          <div class="mission-meta"><span>2022</span><em>MISSION OPS</em></div>
+          <div><h3 data-zh="陆探一号任务支持" data-en="LuTan-1 Mission Support">陆探一号任务支持</h3><p data-zh="在酒泉卫星发射中心负责成像与标定系统，连接算法、工程系统与任务现场。" data-en="Responsible for the imaging and calibration system at Jiuquan Satellite Launch Center, connecting algorithms, engineering systems and mission operations.">在酒泉卫星发射中心负责成像与标定系统，连接算法、工程系统与任务现场。</p></div>
+          <span class="mission-arrow">↗</span>
+        </article>
+        <article class="mission" tabindex="0">
+          <div class="mission-meta"><span>2021—2025</span><em>SOFTWARE</em></div>
+          <div><h3>AirborneSARPro</h3><p data-zh="作为核心开发者构建机载合成孔径雷达处理与分析软件套件，支撑协同层析探测技术研究。" data-en="Core developer of an airborne synthetic aperture radar processing and analysis suite supporting cooperative tomographic sensing research.">作为核心开发者构建机载合成孔径雷达处理与分析软件套件，支撑协同层析探测技术研究。</p></div>
+          <span class="mission-arrow">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="research" class="research section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">05 / RESEARCH</p><h2 data-zh="近期研究" data-en="Selected research">近期研究</h2></div>
+        <p data-zh="研究重点从散射机理延伸到跨频融合与大范围语义分割。" data-en="Research progresses from scattering physics to cross-frequency fusion and large-scale semantic segmentation.">研究重点从散射机理延伸到跨频融合与大范围语义分割。</p>
+      </div>
+      <div class="paper-list">
+        <a href="https://doi.org/10.1080/2150704X.2025.2470884" target="_blank" rel="noreferrer" class="paper">
+          <span class="paper-year">2025</span><div><h3>Fine classification of multi-frequency PolSAR images using an adaptive fusion network</h3><p>Remote Sensing Letters · 16(5), 461–471</p></div><span>↗</span>
+        </a>
+        <a href="https://doi.org/10.3390/rs16020380" target="_blank" rel="noreferrer" class="paper">
+          <span class="paper-year">2024</span><div><h3>Global Polarimetric SAR Image Segmentation with Data Augmentation and Hybrid Architecture Model</h3><p>Remote Sensing · 16(2), 380</p></div><span>↗</span>
+        </a>
+        <a href="https://doi.org/10.3390/rs13132583" target="_blank" rel="noreferrer" class="paper">
+          <span class="paper-year">2021</span><div><h3>An Adaptive Decomposition Approach with Dipole Aggregation Model for Polarimetric SAR Data</h3><p>Remote Sensing · 13, 2583</p></div><span>↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="ecosystem section-shell" aria-labelledby="ecosystem-title">
+      <div class="section-heading inverse">
+        <div><p class="section-index">06 / DATA & NETWORK</p><h2 id="ecosystem-title" data-zh="数据与合作网络" data-en="Data & research network">数据与合作网络</h2></div>
+        <p data-zh="卫星与机载数据链接指向任务方或官方数据入口；机构链接对应教育、访问研究、任职或项目经历。" data-en="Mission and airborne-data links lead to official sources. Institution links reflect education, visiting research, employment or project experience.">卫星与机载数据链接指向任务方或官方数据入口；机构链接对应教育、访问研究、任职或项目经历。</p>
+      </div>
+      <div class="link-columns">
+        <div class="link-group">
+          <h3 data-zh="数据与任务" data-en="Data & missions">数据与任务</h3>
+          <a href="https://www.cnsa.gov.cn/english/n6465652/n6465653/c6649456/content.html" target="_blank" rel="noreferrer"><span>GF-3</span><small>C-band · PolSAR</small><b>↗</b></a>
+          <a href="https://www.eorc.jaxa.jp/ALOS/en/dataset/palsar2_l22_e.htm" target="_blank" rel="noreferrer"><span>ALOS-2 / PALSAR-2</span><small>L-band · JAXA</small><b>↗</b></a>
+          <a href="https://www.asc-csa.gc.ca/eng/satellites/radarsat2/" target="_blank" rel="noreferrer"><span>RADARSAT-2</span><small>C-band · CSA</small><b>↗</b></a>
+          <a href="https://www.dlr.de/en/research-and-transfer/projects-and-missions/terrasar-x/data-access-and-products" target="_blank" rel="noreferrer"><span>TerraSAR-X</span><small>X-band · DLR</small><b>↗</b></a>
+          <a href="https://dataspace.copernicus.eu/data-collections/copernicus-sentinel-missions/sentinel-1" target="_blank" rel="noreferrer"><span>Sentinel-1</span><small>C-band · Copernicus</small><b>↗</b></a>
+          <a href="https://geoservice.dlr.de/data-assets/yfl6ddw7pp47.html" target="_blank" rel="noreferrer"><span>E-SAR</span><small>Airborne · DLR</small><b>↗</b></a>
+          <a href="https://www.mdpi.com/2072-4292/16/2/380" target="_blank" rel="noreferrer"><span>AIRSAR Flevoland</span><small>L-band · research dataset</small><b>↗</b></a>
+          <a href="https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Preparing_for_tomorrow/Scientific_and_technical_mission_documents" target="_blank" rel="noreferrer"><span>Harmony</span><small>ESA Earth Explorer 10</small><b>↗</b></a>
+        </div>
+        <div class="link-group">
+          <h3 data-zh="机构与合作经历" data-en="Institutions & collaborations">机构与合作经历</h3>
+          <a href="https://sess2.pku.edu.cn/english/index.htm" target="_blank" rel="noreferrer"><span data-zh="北京大学" data-en="Peking University">北京大学</span><small data-zh="博士 · 地球与空间科学学院" data-en="Ph.D. · School of Earth & Space Sciences">博士 · 地球与空间科学学院</small><b>↗</b></a>
+          <a href="https://research.tudelft.nl/en/organisations/geoscience-and-remote-sensing/" target="_blank" rel="noreferrer"><span>TU Delft</span><small data-zh="访问研究 · Radar Group" data-en="Visiting research · Radar Group">访问研究 · Radar Group</small><b>↗</b></a>
+          <a href="https://english.aircas.cas.cn/" target="_blank" rel="noreferrer"><span data-zh="中国科学院空天信息创新研究院" data-en="Aerospace Information Research Institute, CAS">中国科学院空天信息创新研究院</span><small data-zh="研究与工程" data-en="Research & engineering">研究与工程</small><b>↗</b></a>
+          <a href="https://english.bjfu.edu.cn/" target="_blank" rel="noreferrer"><span data-zh="北京林业大学" data-en="Beijing Forestry University">北京林业大学</span><small data-zh="本科 · 地理信息系统" data-en="B.Eng. · Geographic Information System">本科 · 地理信息系统</small><b>↗</b></a>
+          <a href="https://www.esa.int/Applications/Observing_the_Earth/FutureEO/Preparing_for_tomorrow/Scientific_and_technical_mission_documents" target="_blank" rel="noreferrer"><span data-zh="欧洲航天局" data-en="European Space Agency">欧洲航天局</span><small>Harmony Phase 0 Science</small><b>↗</b></a>
+          <a href="https://www.nsfc.gov.cn/english/site_1/index.html" target="_blank" rel="noreferrer"><span data-zh="国家自然科学基金委员会" data-en="National Natural Science Foundation of China">国家自然科学基金委员会</span><small data-zh="科研项目支持" data-en="Research project support">科研项目支持</small><b>↗</b></a>
         </div>
       </div>
     </section>
 
-    <section class="section-pad" id="about">
-      <div class="shell split-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
-          <h2 data-i18n="about.title">关于我</h2>
-        </div>
-        <div class="prose reveal">
-          <p data-i18n="about.p1">这是 Zezhong Wang 的个人主页，用于集中展示公开项目、研究兴趣、写作与合作方式。</p>
-          <p data-i18n="about.p2">我重视清晰的问题定义、可靠的方法和可复用的成果，也愿意把探索过程公开记录下来，让知识更容易被理解和继续发展。</p>
-          <div class="tag-row" aria-label="关键词">
-            <span data-i18n="about.tag1">开放协作</span>
-            <span data-i18n="about.tag2">持续学习</span>
-            <span data-i18n="about.tag3">清晰表达</span>
-          </div>
+    <section class="bio section-shell">
+      <div class="bio-orbit" aria-hidden="true"><span></span><i></i></div>
+      <div class="bio-copy">
+        <p class="section-index">07 / PROFILE</p>
+        <h2 data-zh="研究的深度，<br>工程的落地。" data-en="Scientific depth.<br>Engineering delivery.">研究的深度，<br>工程的落地。</h2>
+        <p data-zh="北京大学摄影测量与遥感博士，曾在代尔夫特理工大学雷达组开展访问研究，后在中国科学院苏州空天信息研究院担任研究员。研究经历横跨极化散射建模、干涉成像、深度学习与任务系统研发。" data-en="Ph.D. in Photogrammetry and Remote Sensing from Peking University, former visiting researcher with the Radar Group at TU Delft, and researcher at the Suzhou Aerospace Information Research Institute, CAS. My work spans polarimetric scattering models, interferometric imaging, deep learning and mission software.">北京大学摄影测量与遥感博士，曾在代尔夫特理工大学雷达组开展访问研究，后在中国科学院苏州空天信息研究院担任研究员。研究经历横跨极化散射建模、干涉成像、深度学习与任务系统研发。</p>
+        <div class="bio-links">
+          <a href="https://orcid.org/0000-0002-5778-3769" target="_blank" rel="noreferrer"><span data-zh="查看完整研究记录" data-en="View full research record">查看完整研究记录</span><b>ORCID ↗</b></a>
         </div>
       </div>
     </section>
 
-    <section class="section-pad section-tinted" id="focus">
-      <div class="shell">
-        <div class="section-heading centered reveal">
-          <p class="eyebrow" data-i18n="focus.eyebrow">Focus</p>
-          <h2 data-i18n="focus.title">关注方向</h2>
-          <p data-i18n="focus.subtitle">围绕真实问题，连接数据、技术与知识传播。</p>
-        </div>
-
-        <div class="card-grid focus-grid">
-          <article class="focus-card reveal">
-            <span class="card-number">01</span>
-            <div class="focus-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"></path></svg>
-            </div>
-            <h3 data-i18n="focus.card1.title">数据与分析</h3>
-            <p data-i18n="focus.card1.text">从数据整理、探索到可视化，建立可解释、可复现的分析过程。</p>
-          </article>
-
-          <article class="focus-card reveal">
-            <span class="card-number">02</span>
-            <div class="focus-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 0-4 4v1a4 4 0 0 0-3 3.87V14a4 4 0 0 0 4 4h1v4M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1 3 3.87V14a4 4 0 0 1-4 4h-1v4M8 7h8M8 14h8"></path></svg>
-            </div>
-            <h3 data-i18n="focus.card2.title">人工智能应用</h3>
-            <p data-i18n="focus.card2.text">关注 AI 在研究、创作与日常工作中的实用价值，而不止是概念演示。</p>
-          </article>
-
-          <article class="focus-card reveal">
-            <span class="card-number">03</span>
-            <div class="focus-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16v14H7l-3 3V4Z"></path><path d="M8 9h8M8 13h5"></path></svg>
-            </div>
-            <h3 data-i18n="focus.card3.title">研究与传播</h3>
-            <p data-i18n="focus.card3.text">把复杂内容转化为结构清楚、可验证、便于行动的文章与作品。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad" id="projects">
-      <div class="shell">
-        <div class="section-heading row-heading reveal">
-          <div>
-            <p class="eyebrow" data-i18n="projects.eyebrow">Selected work</p>
-            <h2 data-i18n="projects.title">公开项目</h2>
-          </div>
-          <a class="text-link" href="https://github.com/meiqingg" target="_blank" rel="noopener noreferrer">
-            <span data-i18n="projects.all">查看 GitHub</span>
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-
-        <div class="project-grid" id="project-grid" aria-live="polite">
-          <article class="project-card project-placeholder reveal">
-            <div class="project-topline"><span class="project-kind">GitHub</span><span>↗</span></div>
-            <h3 data-i18n="projects.loadingTitle">正在读取公开仓库</h3>
-            <p data-i18n="projects.loadingText">项目会从 GitHub 自动同步到这里。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad section-tinted" id="updates">
-      <div class="shell split-grid">
-        <div class="section-heading reveal">
-          <p class="eyebrow" data-i18n="updates.eyebrow">Updates</p>
-          <h2 data-i18n="updates.title">最近动态</h2>
-          <p data-i18n="updates.subtitle">这里记录值得分享的阶段性进展。</p>
-        </div>
-
-        <div class="timeline reveal">
-          <article class="timeline-item">
-            <time datetime="2026-06" data-i18n="updates.item1.date">2026 · 06</time>
-            <div>
-              <h3 data-i18n="updates.item1.title">个人主页上线</h3>
-              <p data-i18n="updates.item1.text">基于 GitHub Pages 建立个人作品与研究入口。</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <time datetime="2026" data-i18n="updates.item2.date">进行中</time>
-            <div>
-              <h3 data-i18n="updates.item2.title">公开项目整理</h3>
-              <p data-i18n="updates.item2.text">未来的公开仓库会自动显示在项目区域。</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <time datetime="2026" data-i18n="updates.item3.date">开放</time>
-            <div>
-              <h3 data-i18n="updates.item3.title">交流与合作</h3>
-              <p data-i18n="updates.item3.text">欢迎围绕数据、AI 应用和知识传播展开交流。</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad contact-section" id="contact">
-      <div class="shell contact-panel reveal">
-        <div>
-          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
-          <h2 data-i18n="contact.title">一起做有价值的事</h2>
-          <p data-i18n="contact.text">有项目、想法或合作机会，欢迎直接联系。</p>
-        </div>
-        <div class="contact-actions">
-          <a class="button button-light" href="mailto:meiqingg@gmail.com">meiqingg@gmail.com</a>
-          <a class="button button-outline-light" href="https://github.com/meiqingg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        </div>
-      </div>
+    <section class="closing section-shell">
+      <div><p class="eyebrow"><span class="pulse"></span><span data-zh="开放合作" data-en="OPEN TO COLLABORATION">开放合作</span></p><h2 data-zh="用更好的遥感，<br>回答更难的问题。" data-en="Better sensing for<br>harder questions.">用更好的遥感，<br>回答更难的问题。</h2></div>
+      <a class="round-link" href="https://orcid.org/0000-0002-5778-3769" target="_blank" rel="noreferrer" aria-label="访问 ORCID"><span>ORCID</span><b>↗</b></a>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <p>© <span id="year"></span> Zezhong Wang.</p>
-      <p data-i18n="footer.note">由 GitHub Pages 托管 · 无追踪器</p>
-      <a href="#top" data-i18n="footer.back">返回顶部 ↑</a>
-    </div>
-  </footer>
+  <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span>REMOTE SENSING · SAR · GEOINTELLIGENCE</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
+  <script src="script.js"></script>
 </body>
 </html>
