@@ -29,6 +29,8 @@
 .method-figure p{font-size:.88rem;color:#52615d}
 .method-paper{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;font:500 .68rem var(--mono)}
 .method-paper:hover{color:#4c7123}
+.method-themes{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:7px}
+.method-themes span{padding:6px 9px;border:1px solid var(--line);border-radius:99px;font:500 .56rem var(--mono);letter-spacing:.05em;color:#5e716c}
 .ecosystem{background:#071b1e;color:var(--paper);padding-top:120px;padding-bottom:120px}
 .link-columns{display:grid;grid-template-columns:repeat(2,1fr);gap:7vw}
 .link-group h3{font:500 .7rem var(--mono);letter-spacing:.12em;color:var(--lime);margin-bottom:22px;text-transform:uppercase}
