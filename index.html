@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261019-13" />
+  <link rel="stylesheet" href="styles.css?v=20261019-14" />
 </head>
 <body>
   <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
@@ -53,26 +53,12 @@
         </div>
       </div>
 
-      <div class="hero-visual show-case show-gf3" aria-label="格陵兰遥感案例轮播与交互式雷达扫描">
+      <div class="hero-visual show-gf3" aria-label="格陵兰遥感研究案例轮播">
         <div class="visual-switch" role="group" aria-label="首屏视图">
           <button type="button" data-visual-mode="gf3" aria-pressed="true" data-zh="GF-3 冰川" data-en="GF-3 Glacier">GF-3 冰川</button>
-          <button type="button" data-visual-mode="delft" aria-pressed="false">TU Delft</button>
-          <button type="button" data-visual-mode="snow" aria-pressed="false" data-zh="雪层模型" data-en="Snow model">雪层模型</button>
-          <button type="button" data-visual-mode="accumulation" aria-pressed="false" data-zh="积雪累积" data-en="Accumulation">积雪累积</button>
+          <button type="button" data-visual-mode="delft" aria-pressed="false" data-zh="相位机理" data-en="Phase physics">相位机理</button>
+          <button type="button" data-visual-mode="stats" aria-pressed="false" data-zh="积雪统计" data-en="Snow statistics">积雪统计</button>
           <button type="button" data-visual-mode="timeseries" aria-pressed="false" data-zh="时序观测" data-en="Time series">时序观测</button>
-          <button type="button" data-visual-mode="moran" aria-pressed="false" data-zh="定量统计" data-en="Statistics">定量统计</button>
-          <button type="button" data-visual-mode="radar" aria-pressed="false" data-zh="互动雷达" data-en="Radar scan">互动雷达</button>
-        </div>
-        <canvas id="radarCanvas"></canvas>
-        <div class="hud hud-top radar-ui"><span>SAR / POL</span><span class="live">LIVE</span></div>
-        <div class="hud hud-side radar-ui" aria-hidden="true"><span>74°N</span><span>68°N</span><span>62°N</span></div>
-        <div class="hud hud-bottom radar-ui">
-          <span>HH</span><span>HV</span><span>VV</span><span>Δφ</span>
-        </div>
-        <div class="scan-caption radar-ui"><span data-zh="移动指针，探索回波" data-en="Move to interrogate echoes">移动指针，探索回波</span><b id="signalValue">−18.4 dB</b></div>
-        <div class="profile-chip radar-ui">
-          <img src="assets/img/avatar.png" alt="Zezhong Wang" width="56" height="56" />
-          <div><strong>Zezhong Wang</strong><span><i></i><span data-zh="欢迎交流与合作" data-en="Open to collaboration">欢迎交流与合作</span></span></div>
         </div>
         <article class="hero-case-study case-gf3">
           <a class="case-image" href="assets/img/gf3-greenland-glacier.png" target="_blank" rel="noreferrer" aria-label="查看高分三号格陵兰冰川伪彩色合成影像大图">
@@ -92,14 +78,20 @@
           </div>
         </article>
         <article class="hero-case-study case-delft">
-          <a class="case-image" href="assets/img/tu-delft-closure-phase-concept.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 三联相位与相干性概念图大图">
-            <img src="assets/img/tu-delft-closure-phase-concept.webp" alt="TU Delft 研究中的三联相位与相干性分布概念图" decoding="async">
-            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
-          </a>
+          <div class="case-image-stack">
+            <a class="case-image" href="assets/img/tu-delft-closure-phase-concept.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 三联相位与相干性概念图大图">
+              <img src="assets/img/tu-delft-closure-phase-concept.webp" alt="TU Delft 研究中的三联相位与相干性分布概念图" decoding="async">
+              <span>01 ↗</span>
+            </a>
+            <a class="case-image" href="assets/img/tu-delft-snow-phase-model.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 雪层相位与雷达穿透深度模型大图">
+              <img src="assets/img/tu-delft-snow-phase-model.webp" alt="TU Delft 研究中的干雪、雪水混合物与水的相位和穿透深度模型" decoding="async">
+              <span>02 ↗</span>
+            </a>
+          </div>
           <div class="case-copy">
-            <p class="case-kicker">2022 / TU DELFT / SENTINEL-1</p>
-            <h2 data-zh="相位闭合中<br>隐藏的冰雪信息" data-en="Ice and snow signals<br>hidden in phase closure">相位闭合中<br>隐藏的冰雪信息</h2>
-            <p data-zh="这张概念图展示干涉对相干性分布与三联相位之间的关系：三联相位的统计结构可能保存体散射信息。交流研究进一步分析了2017—2020年格陵兰西南部200余景 Sentinel-1 C 波段 SAR 影像，建立雪层指数衰减模型，探索相位闭合、相干性、微波穿透深度与季节性融雪之间的联系。" data-en="This concept figure relates the coherence distribution of interferometric pairs to triplet phase, whose statistical structure may preserve volume-scattering information. The visiting research further analysed more than 200 Sentinel-1 C-band SAR scenes over southwest Greenland from 2017 to 2020, using a snow-based exponential-decay model to explore links among phase closure, coherence, microwave penetration depth and seasonal snowmelt.">这张概念图展示干涉对相干性分布与三联相位之间的关系：三联相位的统计结构可能保存体散射信息。交流研究进一步分析了2017—2020年格陵兰西南部200余景 Sentinel-1 C 波段 SAR 影像，建立雪层指数衰减模型，探索相位闭合、相干性、微波穿透深度与季节性融雪之间的联系。</p>
+            <p class="case-kicker">2022 / TU DELFT / PHASE PHYSICS</p>
+            <h2 data-zh="从相位闭合到<br>雪层穿透机理" data-en="From phase closure<br>to snow penetration">从相位闭合到<br>雪层穿透机理</h2>
+            <p data-zh="上图描述干涉对相干性分布与三联相位之间的关系；下图进一步把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，参与干涉的散射层发生变化，从而改变相干性与相位闭合的统计特征。" data-en="The upper figure relates interferometric coherence distributions to triplet phase. The lower figure then connects scatterer phase within a pixel and local triplet-phase randomness to radar penetration depth. As dry snow transitions to a snow-water mixture and then water, the scattering layers contributing to the interferogram change, altering coherence and phase-closure statistics.">上图描述干涉对相干性分布与三联相位之间的关系；下图进一步把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，参与干涉的散射层发生变化，从而改变相干性与相位闭合的统计特征。</p>
             <div class="case-legend case-facts" aria-label="研究概览">
               <span><b>200+</b><em data-zh="Sentinel-1 影像" data-en="Sentinel-1 scenes">Sentinel-1 影像</em></span>
               <span><b>166</b><em data-zh="相位闭合样本" data-en="closure samples">相位闭合样本</em></span>
@@ -108,36 +100,25 @@
             <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
         </article>
-        <article class="hero-case-study case-snow">
-          <a class="case-image" href="assets/img/tu-delft-snow-phase-model.png" target="_blank" rel="noreferrer" aria-label="查看 TU Delft 雪层相位与雷达穿透深度模型大图">
-            <img src="assets/img/tu-delft-snow-phase-model.webp" alt="TU Delft 研究中的干雪、雪水混合物与水的相位和穿透深度模型" decoding="async">
-            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
-          </a>
-          <div class="case-copy">
-            <p class="case-kicker">TU DELFT / SNOW MODEL / INSAR</p>
-            <h2 data-zh="从雪到水，<br>理解相位变化" data-en="From snow to water:<br>interpreting phase change">从雪到水，<br>理解相位变化</h2>
-            <p data-zh="该图把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，介电性质与有效穿透深度发生变化，参与干涉的散射层减少，进而改变相干性和相位闭合的统计特征。这一物理解释支撑利用 Sentinel-1 季节时间序列感知格陵兰融雪过程。" data-en="The figure connects scatterer phase within a pixel, local triplet-phase randomness and radar penetration depth. As dry snow transitions to a snow-water mixture and then water, dielectric properties and effective penetration depth change, reducing the number of scattering layers contributing to the interferogram and altering the statistics of coherence and phase closure. This physical interpretation supports sensing Greenland snowmelt with seasonal Sentinel-1 time series.">该图把单像元散射体相位、局部三联相位随机性与雷达穿透深度联系起来。随着干雪转变为雪—水混合物和水，介电性质与有效穿透深度发生变化，参与干涉的散射层减少，进而改变相干性和相位闭合的统计特征。这一物理解释支撑利用 Sentinel-1 季节时间序列感知格陵兰融雪过程。</p>
-            <div class="case-legend case-facts" aria-label="雪层状态">
-              <span><b>SNOW</b><em data-zh="深穿透 · 多层散射" data-en="deep · layered">深穿透 · 多层散射</em></span>
-              <span><b>MIX</b><em data-zh="融雪过渡" data-en="melt transition">融雪过渡</em></span>
-              <span><b>WATER</b><em data-zh="浅穿透 · 少层散射" data-en="shallow · fewer layers">浅穿透 · 少层散射</em></span>
-            </div>
-            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
+        <article class="hero-case-study case-stats">
+          <div class="case-image-stack">
+            <a class="case-image" href="assets/img/tu-delft-snow-accumulation.png" target="_blank" rel="noreferrer" aria-label="查看九月至次年五月积雪累积模拟大图">
+              <img src="assets/img/tu-delft-snow-accumulation.webp" alt="九月至次年五月均匀降雪与随机降雪情景下的积雪累积示意图" decoding="async">
+              <span>01 ↗</span>
+            </a>
+            <a class="case-image" href="assets/img/greenland-morans-i-statistics.png" target="_blank" rel="noreferrer" aria-label="查看格陵兰相位闭合空间自相关统计大图">
+              <img src="assets/img/greenland-morans-i-statistics.webp" alt="2017至2020年格陵兰相位闭合 Moran's I 空间自相关统计曲线" decoding="async">
+              <span>02 ↗</span>
+            </a>
           </div>
-        </article>
-        <article class="hero-case-study case-accumulation">
-          <a class="case-image" href="assets/img/tu-delft-snow-accumulation.png" target="_blank" rel="noreferrer" aria-label="查看九月至次年五月积雪累积模拟大图">
-            <img src="assets/img/tu-delft-snow-accumulation.webp" alt="九月至次年五月均匀降雪与随机降雪情景下的积雪累积示意图" decoding="async">
-            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
-          </a>
           <div class="case-copy">
-            <p class="case-kicker">SEP—MAY / SNOW ACCUMULATION / GREENLAND</p>
-            <h2 data-zh="9月至次年5月，<br>雪量持续累积" data-en="September to May:<br>seasonal snow accumulation">9月至次年5月，<br>雪量持续累积</h2>
-            <p data-zh="该图模拟每年9月至次年5月的积雪累积过程，这一时期整体雪量呈增加趋势。左图采用均匀降雪假设，展示稳定的逐月累积；右图引入随机降雪，表示各次降雪发生的时间与强度并不均匀。模拟将降雪时间序列与雪层结构及雷达穿透深度联系起来，为解释闭合相位的季节变化提供物理背景。" data-en="The figure models snow accumulation from September to the following May, a period of overall increasing snow mass. The left panel assumes uniform snowfall and shows steady monthly accumulation; the right introduces random snowfall, reflecting uneven timing and intensity of individual events. The simulation links snowfall time series to snow structure and radar penetration depth, providing physical context for seasonal changes in phase closure.">该图模拟每年9月至次年5月的积雪累积过程，这一时期整体雪量呈增加趋势。左图采用均匀降雪假设，展示稳定的逐月累积；右图引入随机降雪，表示各次降雪发生的时间与强度并不均匀。模拟将降雪时间序列与雪层结构及雷达穿透深度联系起来，为解释闭合相位的季节变化提供物理背景。</p>
+            <p class="case-kicker">ACCUMULATION / MORAN'S I / GREENLAND</p>
+            <h2 data-zh="从积雪累积到<br>融化起点统计" data-en="From snow accumulation<br>to melt-onset statistics">从积雪累积到<br>融化起点统计</h2>
+            <p data-zh="上图模拟每年9月至次年5月的积雪累积过程，整体雪量呈增加趋势；下图以 Moran’s I 定量刻画相位闭合信号的空间自相关。2018年4月17日与2019年5月24日的两个主要高峰反映夏季来临、冰川开始融化前后的关键转折，将积雪过程与可比较的 SAR 季节信号联系起来。" data-en="The upper figure models snow accumulation from September to the following May, a period of overall increasing snow mass. The lower figure quantifies the spatial autocorrelation of phase-closure signals with Moran’s I. Two major peaks on 17 April 2018 and 24 May 2019 capture key transitions around the onset of glacier melt, linking snow accumulation to a comparable seasonal SAR signal.">上图模拟每年9月至次年5月的积雪累积过程，整体雪量呈增加趋势；下图以 Moran’s I 定量刻画相位闭合信号的空间自相关。2018年4月17日与2019年5月24日的两个主要高峰反映夏季来临、冰川开始融化前后的关键转折，将积雪过程与可比较的 SAR 季节信号联系起来。</p>
             <div class="case-legend case-facts" aria-label="积雪季节阶段">
-              <span><b>SEP</b><em data-zh="累积期开始" data-en="accumulation begins">累积期开始</em></span>
-              <span><b>WINTER</b><em data-zh="持续降雪" data-en="continued snowfall">持续降雪</em></span>
-              <span><b>MAY</b><em data-zh="累积期结束" data-en="accumulation ends">累积期结束</em></span>
+              <span><b>SEP—MAY</b><em data-zh="积雪增加" data-en="snow gain">积雪增加</em></span>
+              <span><b>2018.04.17</b><em data-zh="统计高峰" data-en="statistical peak">统计高峰</em></span>
+              <span><b>2019.05.24</b><em data-zh="统计高峰" data-en="statistical peak">统计高峰</em></span>
             </div>
             <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
@@ -155,23 +136,6 @@
               <span><b>ESA</b><em>Sentinel-1</em></span>
               <span><b>3 YR</b><em data-zh="连续观测" data-en="observation">连续观测</em></span>
               <span><b>±45°</b><em data-zh="闭合相位" data-en="closure phase">闭合相位</em></span>
-            </div>
-            <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
-          </div>
-        </article>
-        <article class="hero-case-study case-moran">
-          <a class="case-image" href="assets/img/greenland-morans-i-statistics.png" target="_blank" rel="noreferrer" aria-label="查看格陵兰相位闭合空间自相关统计大图">
-            <img src="assets/img/greenland-morans-i-statistics.webp" alt="2017至2020年格陵兰相位闭合 Moran's I 空间自相关统计曲线" decoding="async">
-            <span data-zh="查看完整图示 ↗" data-en="View full figure ↗">查看完整图示 ↗</span>
-          </a>
-          <div class="case-copy">
-            <p class="case-kicker">MORAN'S I / PHASE CLOSURE / QUANTIFICATION</p>
-            <h2 data-zh="用空间自相关<br>量化融化起点" data-en="Quantifying melt onset<br>with spatial autocorrelation">用空间自相关<br>量化融化起点</h2>
-            <p data-zh="这是图1的定量统计结果。Moran’s I 用于刻画相位闭合信号的空间自相关强度；曲线在2018年4月17日与2019年5月24日出现两个主要高峰，反映夏季来临、冰川开始融化前后的关键转折。定量指标把视觉纹理转化为可比较的季节信号，使冻融起点能够在多年序列中被识别。" data-en="This is the quantitative analysis of Figure 1. Moran’s I measures the spatial autocorrelation of phase-closure signals. Two major peaks on 17 April 2018 and 24 May 2019 capture key transitions around the onset of glacier melt as summer approaches. The metric converts visual texture into a comparable seasonal signal, enabling melt onset to be identified across multiple years.">这是图1的定量统计结果。Moran’s I 用于刻画相位闭合信号的空间自相关强度；曲线在2018年4月17日与2019年5月24日出现两个主要高峰，反映夏季来临、冰川开始融化前后的关键转折。定量指标把视觉纹理转化为可比较的季节信号，使冻融起点能够在多年序列中被识别。</p>
-            <div class="case-legend case-facts" aria-label="空间自相关峰值">
-              <span><b>2018.04.17</b><em data-zh="主要高峰" data-en="major peak">主要高峰</em></span>
-              <span><b>2019.05.24</b><em data-zh="主要高峰" data-en="major peak">主要高峰</em></span>
-              <span><b>MORAN I</b><em data-zh="空间自相关" data-en="spatial autocorrelation">空间自相关</em></span>
             </div>
             <a class="case-source" href="assets/reports/phase-closure-greenland-tu-delft-2022.pdf" target="_blank" rel="noreferrer"><span data-zh="阅读研究报告" data-en="Read the research report">阅读研究报告</span><b aria-hidden="true">↗</b></a>
           </div>
@@ -418,6 +382,6 @@
   </main>
 
   <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
-  <script src="script.js?v=20261019-13"></script>
+  <script src="script.js?v=20261019-14"></script>
 </body>
 </html>
