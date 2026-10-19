@@ -5,26 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Zezhong Wang 的个人遥感研究与工程作品集，聚焦极化 SAR、InSAR、雷达成像与多源遥感融合。" />
   <meta name="theme-color" content="#061b1f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zezhong Wang — Remote Sensing Scientist" />
+  <meta property="og:description" content="Polarimetric SAR, InSAR, radar imaging and traceable Earth-observation evidence." />
+  <meta property="og:image" content="assets/img/social-card.svg" />
   <title>Zezhong Wang — Remote Sensing Scientist</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#top" data-zh="跳到主要内容" data-en="Skip to content">跳到主要内容</a>
   <div class="noise" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="返回首页">
       <span class="brand-mark" aria-hidden="true"><i></i></span>
       <span>Z. WANG</span>
     </a>
-    <nav aria-label="主导航">
+    <nav id="site-nav" aria-label="主导航">
       <a href="#capabilities" data-zh="能力" data-en="Capabilities">能力</a>
       <a href="#applications" data-zh="应用" data-en="Applications">应用</a>
       <a href="#missions" data-zh="项目" data-en="Missions">项目</a>
       <a href="#research" data-zh="研究" data-en="Research">研究</a>
+      <a href="#github" data-zh="开源" data-en="Open source">开源</a>
     </nav>
-    <button class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    <div class="header-actions">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航"><span></span><span></span><span></span></button>
+      <button class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+    </div>
   </header>
 
   <main id="top">
@@ -52,6 +62,10 @@
           <span>HH</span><span>HV</span><span>VV</span><span>Δφ</span>
         </div>
         <div class="scan-caption"><span data-zh="移动指针，探索回波" data-en="Move to interrogate echoes">移动指针，探索回波</span><b id="signalValue">−18.4 dB</b></div>
+        <div class="profile-chip">
+          <img src="assets/img/avatar.png" alt="Zezhong Wang" width="56" height="56" />
+          <div><strong>Zezhong Wang</strong><span><i></i><span data-zh="欢迎交流与合作" data-en="Open to collaboration">欢迎交流与合作</span></span></div>
+        </div>
       </div>
     </section>
 
@@ -179,9 +193,24 @@
       </div>
     </section>
 
+    <section id="github" class="open-source section-shell">
+      <div class="section-heading">
+        <div><p class="section-index">06 / OPEN SOURCE</p><h2 data-zh="公开工作与持续更新" data-en="Open work, continuously updated">公开工作与持续更新</h2></div>
+        <p data-zh="保留旧版网站的开放项目入口，并把它变成研究主页的一部分。公开仓库会从 GitHub 自动同步。" data-en="The original site's open-project feed now lives inside the research portfolio. Public repositories sync automatically from GitHub.">保留旧版网站的开放项目入口，并把它变成研究主页的一部分。公开仓库会从 GitHub 自动同步。</p>
+      </div>
+      <div class="github-summary">
+        <div><strong id="repo-count">—</strong><span data-zh="公开仓库" data-en="Public repositories">公开仓库</span></div>
+        <div><strong id="follower-count">—</strong><span data-zh="关注者" data-en="Followers">关注者</span></div>
+        <a href="https://github.com/lengmeiqing" target="_blank" rel="noreferrer"><strong>GitHub</strong><span data-zh="查看完整主页 ↗" data-en="View full profile ↗">查看完整主页 ↗</span></a>
+      </div>
+      <div id="github-projects" class="github-projects" aria-live="polite">
+        <a class="repo-card" href="https://github.com/lengmeiqing" target="_blank" rel="noreferrer"><span>LOADING</span><h3 data-zh="正在读取公开项目" data-en="Loading public projects">正在读取公开项目</h3><p data-zh="如果加载失败，可直接访问 GitHub 主页。" data-en="If loading fails, visit the GitHub profile directly.">如果加载失败，可直接访问 GitHub 主页。</p></a>
+      </div>
+    </section>
+
     <section class="ecosystem section-shell" aria-labelledby="ecosystem-title">
       <div class="section-heading inverse">
-        <div><p class="section-index">06 / DATA & NETWORK</p><h2 id="ecosystem-title" data-zh="数据与合作网络" data-en="Data & research network">数据与合作网络</h2></div>
+        <div><p class="section-index">07 / DATA & NETWORK</p><h2 id="ecosystem-title" data-zh="数据与合作网络" data-en="Data & research network">数据与合作网络</h2></div>
         <p data-zh="卫星与机载数据链接指向任务方或官方数据入口；机构链接对应教育、访问研究、任职或项目经历。" data-en="Mission and airborne-data links lead to official sources. Institution links reflect education, visiting research, employment or project experience.">卫星与机载数据链接指向任务方或官方数据入口；机构链接对应教育、访问研究、任职或项目经历。</p>
       </div>
       <div class="link-columns">
@@ -209,24 +238,28 @@
     </section>
 
     <section class="bio section-shell">
-      <div class="bio-orbit" aria-hidden="true"><span></span><i></i></div>
+      <div class="bio-orbit"><span><img src="assets/img/avatar.png" alt="Zezhong Wang" width="420" height="420" /></span><i aria-hidden="true"></i></div>
       <div class="bio-copy">
-        <p class="section-index">07 / PROFILE</p>
+        <p class="section-index">08 / PROFILE</p>
         <h2 data-zh="研究的深度，<br>工程的落地。" data-en="Scientific depth.<br>Engineering delivery.">研究的深度，<br>工程的落地。</h2>
         <p data-zh="北京大学摄影测量与遥感博士，曾在代尔夫特理工大学雷达组开展访问研究，后在中国科学院苏州空天信息研究院担任研究员。研究经历横跨极化散射建模、干涉成像、深度学习与任务系统研发。" data-en="Ph.D. in Photogrammetry and Remote Sensing from Peking University, former visiting researcher with the Radar Group at TU Delft, and researcher at the Suzhou Aerospace Information Research Institute, CAS. My work spans polarimetric scattering models, interferometric imaging, deep learning and mission software.">北京大学摄影测量与遥感博士，曾在代尔夫特理工大学雷达组开展访问研究，后在中国科学院苏州空天信息研究院担任研究员。研究经历横跨极化散射建模、干涉成像、深度学习与任务系统研发。</p>
         <div class="bio-links">
           <a href="https://orcid.org/0000-0002-5778-3769" target="_blank" rel="noreferrer"><span data-zh="查看完整研究记录" data-en="View full research record">查看完整研究记录</span><b>ORCID ↗</b></a>
+          <a href="https://github.com/lengmeiqing" target="_blank" rel="noreferrer"><span data-zh="查看公开项目" data-en="View public projects">查看公开项目</span><b>GITHUB ↗</b></a>
         </div>
       </div>
     </section>
 
-    <section class="closing section-shell">
-      <div><p class="eyebrow"><span class="pulse"></span><span data-zh="开放合作" data-en="OPEN TO COLLABORATION">开放合作</span></p><h2 data-zh="用更好的遥感，<br>回答更难的问题。" data-en="Better sensing for<br>harder questions.">用更好的遥感，<br>回答更难的问题。</h2></div>
-      <a class="round-link" href="https://orcid.org/0000-0002-5778-3769" target="_blank" rel="noreferrer" aria-label="访问 ORCID"><span>ORCID</span><b>↗</b></a>
+    <section class="closing section-shell" id="contact">
+      <div><p class="eyebrow"><span class="pulse"></span><span data-zh="开放合作" data-en="OPEN TO COLLABORATION">开放合作</span></p><h2 data-zh="用更好的遥感，<br>回答更难的问题。" data-en="Better sensing for<br>harder questions.">用更好的遥感，<br>回答更难的问题。</h2><p class="closing-note" data-zh="有研究、产品或地球观测项目，欢迎直接联系。" data-en="Have a research, product or Earth-observation project? Get in touch.">有研究、产品或地球观测项目，欢迎直接联系。</p></div>
+      <div class="closing-actions">
+        <a class="round-link" href="mailto:meiqingg@gmail.com" aria-label="发送邮件"><span>EMAIL</span><b>↗</b></a>
+        <a class="round-link" href="https://github.com/lengmeiqing" target="_blank" rel="noreferrer" aria-label="访问 GitHub"><span>GITHUB</span><b>↗</b></a>
+      </div>
     </section>
   </main>
 
-  <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span>REMOTE SENSING · SAR · GEOINTELLIGENCE</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
+  <footer class="section-shell"><span>© <span id="year"></span> Zezhong Wang</span><span data-zh="由 GitHub Pages 托管 · 无追踪器" data-en="Hosted on GitHub Pages · No trackers">由 GitHub Pages 托管 · 无追踪器</span><a href="#top" data-zh="回到顶部 ↑" data-en="Back to top ↑">回到顶部 ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
